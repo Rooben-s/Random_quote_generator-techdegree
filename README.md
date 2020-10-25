@@ -1,6 +1,6 @@
 # Project Overview
 
-# Random_quote_generator-techdegree
+# Random_quote_generator from Treehouse techdegree
 Create an app that displays random famous quotes each time a button is clicked. You will select your own quotes from famous historical figures, artists, scientists, celebrities, etc.
 
 Use knowledge of basic JavaScript syntax, variables, loops, conditionals and object literals to:
