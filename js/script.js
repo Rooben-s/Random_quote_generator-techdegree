@@ -8,7 +8,7 @@ Student Name : Rooben Subramanen
 /*** 
  * `quotes` array 
 ***/
-
+// creates an array of objects to store quote related information
 var quotes = [
 {
   quote : "The future belongs to those who believe in the beauty of their dreams.",
@@ -50,6 +50,8 @@ var quotes = [
 
 
 
+// creates an array of objects to store background color information
+// I didn't want to randomize the background color because it can sometimes lead to hard to read quotes
 var colors = [
   {
     background : "#009378",
@@ -75,11 +77,15 @@ var colors = [
 /***
  * `getRandomQuote` function
 ***/
+// generates a random number, assigns it to a variable, then uses it to return a random object from the quotes array
 function getRandomQuote() {
   let randomQuote = Math.floor( Math.random() * quotes.length );
   return quotes[randomQuote];
 }
 
+
+
+// generates a random number, assigns it to a variable, then uses it to return a random object from the colors array
 function getRandomColor() {
   let randomColor = Math.floor(Math.random() * colors.length);
   return colors[randomColor];
@@ -91,36 +97,46 @@ function getRandomColor() {
  * `printQuote` function
 ***/
 
-
 function printQuote() {
+
+      // creates the currentQuoute variable and sets the value to the random object that is returned when the getRandomQuote function is called
+    // creates the currentColor variable and sets the value to the random object that is returned when the getRandomColor function is called
+    // creates the html variable and uses the currentQuote variable along with key values to build a string
   let currentQuote = getRandomQuote();
   let currentColor = getRandomColor();
   let html = " <p class='quote'> " + currentQuote.quote + "</p>" ;
   html += "<p class='source'>" + currentQuote.source ;
 
 
+      // tests to see if the citation property is present in the currentQuote and if so, adds it to the string
     if ("citation" in currentQuote) {
       html += "<span class='citation'> " + currentQuote.citation + "</span>";
 }
 
-
+    // tests to see if the year property is present in the currentQuote and if so, adds it to the string
     if ("year" in currentQuote) {
     html += "<span class='year'> " + currentQuote.year + "</span>";
 }
- 
+
+
+
+
+     // writes the info from the html variable to the div with the quote-box id
+    // uses the currentColor variable to change the background color
     document.getElementById("quote-box").innerHTML = html;
     document.body.style.background = currentColor.background;
+ 
 
 
 }
 
 
-printQuote();
+// runs the printQuote function upon initial page load
+printQuote(); 
 
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
 
+// event listener to respond to "Show another quote" button clicks
+// when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
+
