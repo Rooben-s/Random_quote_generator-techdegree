@@ -1,4 +1,4 @@
-# Project Overview :
+# Project Brief :
 
 # A Random quote generator
 Create an app that displays random famous quotes each time a button is clicked. Select your own quotes from famous historical figures, artists, scientists, celebrities, etc.
