@@ -99,7 +99,7 @@ function getRandomColor() {
 
 function printQuote() {
 
-      // creates the currentQuoute variable and sets the value to the random object that is returned when the getRandomQuote function is called
+      // creates the currentQuote variable and sets the value to the random object that is returned when the getRandomQuote function is called
     // creates the currentColor variable and sets the value to the random object that is returned when the getRandomColor function is called
     // creates the html variable and uses the currentQuote variable along with key values to build a string
   let currentQuote = getRandomQuote();
