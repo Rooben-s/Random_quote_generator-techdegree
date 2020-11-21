@@ -4,6 +4,14 @@ project 1 - A Random Quote Generator
 Student Name : Rooben Subramanen
 ******************************************/
 
+// Create an app that displays random famous quotes each time a button is clicked
+
+// Use knowledge of basic JavaScript syntax, variables, loops, conditionals and object literals to:
+
+//  - Build the array of quote objects to store the quotes.
+//  - Write your own functions for selecting random quotes from the array and printing them to the screen.
+
+
 
 /*** 
  * `quotes` array 
